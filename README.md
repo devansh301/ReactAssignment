@@ -50,13 +50,9 @@ The development server will start, and you can view the app at `http://localhost
 - **`src/`**: Contains the source code of the application.
   - **`components/`**: React components.
   - **`pages/`**: Application pages.
-  - cmt:: the components folder has the pages files where-as no pages folder ?????
   - **`store/`**: Recoil state management files.
-  - **`styles/`**: Custom styles (including Tailwind CSS configurations).
-  - cmt::Where is the style folder???
-  - **`App.js`**: Main application component.
-  - **`index.js`**: Entry point of the application.
-  - cmt: no index.js file found you have main.jsx.Try writing md on your own rather than copy paste.
+  - **`App.jsx`**: Main application component.
+  - **`main.jsx`**: Entry point of the application.
 
 - **`public/`**: Static assets and HTML files.
 - **`vite.config.js`**: Vite configuration file.

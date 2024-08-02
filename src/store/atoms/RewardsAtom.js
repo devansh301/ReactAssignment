@@ -6,9 +6,7 @@ export const RewardsAtom = atom({
         key: 'rewardListSelector',
         get: async() => {
             const res = await fetch("https://mocki.io/v1/68f88502-a805-4d24-a407-ee2a232a5c60");
-            // redundant variable
-            const json = await res.json();
-            return json;
+            return await res.json();
         }
     })
 })

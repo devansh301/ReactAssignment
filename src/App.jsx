@@ -1,12 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Dashboard from './components/Dashboard'
-import RewardDetail from './components/RewardDetail'
 import { RecoilRoot } from 'recoil'
 
-// first import libraries and then components.
+import Dashboard from './pages/Dashboard'
+import RewardDetail from './pages/RewardDetail'
 
 function App() {
-// why empty line???
   return (
     <RecoilRoot>
       <BrowserRouter>
