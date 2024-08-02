@@ -3,8 +3,10 @@ import Dashboard from './components/Dashboard'
 import RewardDetail from './components/RewardDetail'
 import { RecoilRoot } from 'recoil'
 
-function App() {
+// first import libraries and then components.
 
+function App() {
+// why empty line???
   return (
     <RecoilRoot>
       <BrowserRouter>

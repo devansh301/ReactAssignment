@@ -5,8 +5,15 @@ import { RewardsAtom } from "../store/atoms/RewardsAtom";
 export default function RewardDetail() {
     const { id } = useParams();
     const rewardList = useRecoilValue(RewardsAtom);
+    // fix type coercion
     const reward = rewardList.find(r => r.id == id);
+    // should have been a part of side effect. (works in case of static page)
 
+
+    /**
+     * Ideally should have a single return so that data rendering can be done at one place
+     * No data comp can be seperated out as it can also be used in case of app expansion in diff places
+     */
     if (!reward) {
         return (
             <div className="container mx-auto p-4 text-center">
