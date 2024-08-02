@@ -8,7 +8,7 @@ export default function Dashboard() {
     const totalRewards = useRecoilValue(TotalRewardSelector);
     const [rewards, setRewards] = useState(rewardsList);
     const [searchQuery, setSearchQuery] = useState("");
-
+    console.log("test", rewardsList);
     const sortByPoints = () => {
         const sortedRewards = [...rewards].sort((a, b) => a.rewardPoints - b.rewardPoints);
         setRewards(sortedRewards);
@@ -23,10 +23,28 @@ export default function Dashboard() {
         setSearchQuery(event.target.value);
     };
 
+    /** Rewards not updated correctly
+     * The sequence should be:
+     * first filter the rewards list based on search query
+     * then sort by amount date
+     * ideally use side effects to update the utilisable list.
+     * Sorting should work both ways asc. and descending
+     *
+     * con : Bonus tasks
+     */
+
+    /**
+     * Line Wrap
+     * Sapearate out the card component as its used in both places
+     * 1. list 2. rewards detail page
+     *
+     */
+
     const filteredRewards = rewards.filter(rew =>
         rew.brand.toLowerCase().includes(searchQuery.toLowerCase())
     );
-
+    // rewards.length should not be constant
+    console.log("hello" , rewards.length)
     return (
         <div className="container mx-auto p-4">
             <h1 className="text-5xl font-extrabold text-center mb-6">Dashboard</h1>
